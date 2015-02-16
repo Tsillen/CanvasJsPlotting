@@ -1,13 +1,12 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script type="text/javascript" src="jquery-2.1.1.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
 window.onload = function () {
-var dataPoints = [];
-
-//Replace text file's path according to your requirement.
-$.get("testgraph.txt", function(data) {
+	var dataPoints = [];
+	//Replace text file's path according to your requirement.
+	var data = $("#chartContainer").text();
 	var x = 0;
 	var allLines = data.split('\n');
 	if(allLines.length > 0) {
@@ -26,12 +25,19 @@ $.get("testgraph.txt", function(data) {
 		}]
 	});
 	chart.render();
-});
 }
 </script>
 <script type="text/javascript" src="scripts/canvasjs.min.js"></script>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<div id="chartContainer" style="height: 300px; width: 100%;">12
+53
+94
+12
+43
+32
+12
+12
+32</div>
 </body>
 </html>
